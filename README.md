@@ -59,18 +59,18 @@ Follow these simple steps to get the application up and running on your local ma
 
 ## 📁 Project Structure
 mern-app/
-├── backend/                  # Express.js API
+├── backend/
 │   ├── Dockerfile
 │   ├── package.json
 │   └── server.js
 │
-├── frontend/                 # React.js application
+├── frontend/
 │   ├── Dockerfile
 │   ├── package.json
 │   └── src/
 │
-├── .gitignore                # Git ignore file
-└── docker-compose.yml        # Docker Compose configuration
+├── .gitignore
+└── docker-compose.yml
 └── README.md
 
 ## 💻 Technologies Used
