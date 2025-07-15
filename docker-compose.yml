@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  # The Backend Service
+  backend:
+    build: ./backend
+    ports:
+      - "5000:5000"
+    environment:
+      - MONGODB_URI=mongodb://db:27017/quotes_db
+    depends_on:
+      - db
+    networks:
+      - mern-network
+
+  # The Frontend Service
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    networks:
+      - mern-network
+
+  # The Database Service
+  db:
+    image: mongo:latest
+    volumes:
+      - mongodb-data:/data/db
+    networks:
+      - mern-network
+
+# Define the network and volumes
+networks:
+  mern-network:
+    driver: bridge
+
+volumes:
+  mongodb-data:
