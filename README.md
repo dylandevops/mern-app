@@ -63,14 +63,12 @@ mern-app/
 │   ├── Dockerfile
 │   ├── package.json
 │   └── server.js
-│
 ├── frontend/
 │   ├── Dockerfile
 │   ├── package.json
 │   └── src/
-│
 ├── .gitignore
-└── docker-compose.yml
+├── docker-compose.yml
 └── README.md
 
 ## 💻 Technologies Used
